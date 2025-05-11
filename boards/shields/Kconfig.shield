@@ -1,4 +1,5 @@
-config SHIELD_FLOW
-    def_bool $(shields_list_contains,katori)
-    select ADC
-    select GPIO
+config SHIELD_FLOW_LEFT
+    def_bool $(shields_list_contains,flow_left)
+
+config SHIELD_FLOW_RIGHT
+    def_bool $(shields_list_contains,flow_right)

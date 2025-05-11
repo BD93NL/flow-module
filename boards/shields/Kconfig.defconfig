@@ -1,6 +1,17 @@
-if SHIELD_FLOW
+if SHIELD_FLOW_LEFT
 
+# Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "Flow"
+    default "flow"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_FLOW_LEFT || SHIELD_FLOW_RIGHT
+
+config ZMK_SPLIT
+    default y
 
 endif

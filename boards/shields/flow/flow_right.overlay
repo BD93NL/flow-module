@@ -5,6 +5,7 @@
  */
 
 #include "flow.dtsi"
+include "flow.dtsi"
 
 &default_transform {
     col-offset = <17>;

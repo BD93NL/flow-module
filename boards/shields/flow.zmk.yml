@@ -1,0 +1,13 @@
+file_format: "1"
+id: flow
+name: Flow
+type: shield
+url: https://github.com/BD93NL/flow-module
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - studio
+siblings:
+  - flow_left
+  - flow_right

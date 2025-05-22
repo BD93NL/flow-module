@@ -6,8 +6,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
+#define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LCTRL k3  &ht LSHIFT k4
+#define HRMR(k1,k2,k3,k4) &ht RSHIFT k1  &ht RCTRL k2  &ht RALT k3  &ht RGUI k4
 
 / {
     behaviors {
@@ -35,16 +35,16 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  V       │  L       │  H       │  F       │  B       │   │  P       │  W       │  U       │  O       │  .       │
-            &kp V      &kp L      &kp H      &kp F      &kp B          &kp P      &kp W      &kp U      &kp O      &kp DOT
+        //│  V       │  L       │  H       │  F       │  B       │   │  P       │  W       │  U       │  O       │  ,       │
+            &kp V      &kp L      &kp H      &kp F      &kp B          &kp P      &kp W      &kp U      &kp O      &kp COMMA
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  S       │  R       │  N       │  T       │  K       │   │  Y       │  G       │  E       │  A       │  I       │
             HRML(S,        R,         N,         T)     &kp K          &kp Y      HRMR(G,        E,         A,        I)
         //├──────────┼──────────┼──────────┼──────────┼──────────╯   ╰──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  J       │  M       │  D       │                         │  C       │  X       │ Q        │ ,        │
-            &kp Z      &kp J      &kp M      &kp D                                 &kp C      &kp X     &kp Q     &kp COMMA
+        //│  Z       │  J       │  M       │  D       │                         │  C       │  X       │ Q        │ .        │
+            &kp Z      &kp J      &kp M      &kp D                                 &kp C      &kp X     &kp Q      &kp DOT
         //╰──────────┴──────────┴──────────┼──────────┼──────────╮   ╭──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp SPACE     &kp ENTER  &lt 1 BSPC
+                                            &lt 2 TAB   &kp Enter     &kp Space  &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
